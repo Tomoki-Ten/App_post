@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  php:
+    build:
+      context: ./setting/php
+    volumes:
+    - ./app:/work
+  web:
+    build:
+      context: ./setting/nginx
+    ports:
+    - 7000:80
+    volumes:
+    - ./app:/work
+    - ./setting/nginx/default.conf:/etc/ginx/conf.d/default.conf
+  database:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: project
+      MYSQL_DATABASE: image-post-app
+      MYSQL_USER: project
+      MYSQL_PASSWORD: project
+      TZ: Asia/Tokyo
+    volumes:
+    - datavolume:/var/lib/mysql
+    - ./setting/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+volumes:
+  datavolume: {}

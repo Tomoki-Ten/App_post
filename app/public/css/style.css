@@ -1,0 +1,601 @@
+html,body {
+  margin: 0;
+  height: 100%;
+  background: #F2F3F5;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+hr {
+  margin: 4px;
+}
+header {
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  width: 100%;
+  height: 56px;
+}
+.title {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.maincontainer {
+  height: 100%;
+}
+main {
+  min-height: 100vh;
+  width: 50%;
+  padding-top: 56px;
+  overflow: auto;
+}
+main::-webkit-scrollbar {
+  display:none;
+}
+aside {
+  height: 100%;
+  width: 25%;
+  padding-top: 56px;
+  flex-direction: column;
+}
+.empty {
+  background:  #F2F3F5;
+  padding-top: 56px;
+  width: 25%;
+  height: 100%;
+}
+.search {
+  padding: 20px 0 15px 12px;
+}
+.searchform{
+  width: 190px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #828282;
+  outline: none;
+  background: #F2F3F5;
+  font-size: 18px;
+  cursor: pointer;
+}
+.nav {
+  padding: 0 10px 15px 20px;
+}
+.nav li {
+  padding: 4px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.nav li a {
+  color: #000000;
+}
+.nav li:hover {
+  background: #DADDE1;
+}
+.sidebar-default-image {
+  font-size: 45px;
+  color: grey;
+}
+.sidebar-user-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+}
+.sidebarusername {
+  font-weight: bold;
+  font-size: 17px;
+}
+.home {
+  color: red;
+}
+.login {
+  color: #00B140;
+}
+.register {
+  color: #339af0;
+}
+.toukou {
+  color: #339af0;
+}
+.imagesetting {
+color: orange;
+}
+#sidebar-post {
+  cursor: pointer;
+}
+footer {
+  margin-top: auto;
+  font-size: 15px;
+  color: #828282;
+}
+.postcontainer {
+  width: 500px;
+}
+.post {
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.postinfo {
+  padding: 10px 20px;
+}
+.post-userimage {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  border-radius: 50px;
+}
+.post-default-userimage {
+  font-size: 45px;
+  margin-right: 15px;
+  color: grey;
+}
+.postusername {
+  margin: 0;
+  font-weight: bold;
+  font-size: 19px;
+}
+.postdate {
+  margin: 0 0 0 15px;
+  color: #828282;
+}
+.postimage {
+  width: 500px;
+}
+.textcontainer {
+  padding: 10px 20px;
+}
+.posttitle {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 19px;
+}
+.posttext {
+  margin-bottom: 0;
+}
+.postbottom {
+  padding: 10px 20px;
+}
+.postbottom span {
+  color: #828282;
+}
+
+/* 検索結果メッセージ */
+.search-message {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+/* ------ Show Post Page ----- */
+/* ------ Show Post Page ----- */
+
+.show-action-container {
+  margin-top: 10px;
+  padding: 8px 20px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.show-edit-btn {
+  width: 50%;
+  margin-right: 20px;
+}
+.show-delete-form {
+  width: 50%;
+}
+.show-delete-btn {
+  width: 100%;
+}
+.show-comment-btn {
+  width: 70%;
+}
+.show-comment {
+  margin-top: 20px;
+  padding-bottom: 8px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.show-comment-user-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+.show-comment-default-image {
+  font-size: 35px;
+  color: grey;
+  margin-right: 10px;
+}
+.comment-updated-at {
+  margin:0 0 0 15px;
+  color: #828282;
+  font-size: 12px;
+}
+
+
+/* --- Modal Window - Post Post --- */
+/* --- Modal Window - Post Post --- */
+
+#modal {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 550px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+}
+#mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background: rgba(0,0,0,0.2);
+}
+.hidden {
+  display: none;
+}
+#modal form p {
+  margin: 0;
+}
+.modalsubject {
+  margin: 0 auto;
+  padding-top: 15px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.closeicon {
+  margin: 20px 20px 0 0;
+  cursor: pointer;
+}
+.closeicon:hover {
+  opacity: 0.7;
+}
+#modal hr {
+  margin: 8px;
+}
+.modalpostinfo {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+.modalpostinfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.modalpostinfo i {
+  font-size: 40px;
+  color: grey;
+}
+.modalusername {
+  margin: 0 0 0 15px;
+  font-weight: bold;
+  font-size: 19px;
+}
+.formtitle {
+  width: 510px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  outline: none;
+  background: #F2F3F5;
+  font-size: 18px;
+}
+.formpost {
+  margin-top: 10px;
+  width: 510px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  outline: none;
+  background: #F2F3F5;
+  font-size: 16px;
+}
+#modal form {
+  padding: 0 20px;
+}
+.filelabel {
+  margin: 10px 0;
+  font-size: 17px;
+}
+.filelabel input {
+  display: none;
+}
+#preview {
+  width: 510px;
+  border-radius: 10px;
+}
+#preview-holder {
+  height: auto;
+}
+#preview-close {
+  position: relative;
+  top: 40px;
+  left: 470px;
+  cursor: pointer;
+  color: #828282;
+}
+#preview-close:hover {
+  opacity: 0.7;
+}
+.submitbtn {
+  margin: 10px 0 20px 0;
+  width: 510px;
+  font-size: 18px;
+}
+
+
+/* --- Modal Window - Edit Post --- */
+/* --- Modal Window - Edit Post --- */
+
+#modal-post-edit {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 550px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+}
+#edit-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background: rgba(0,0,0,0.2);
+}
+#modal-post-edit form p {
+  margin: 0;
+}
+#modal-post-edit hr {
+  margin: 8px;
+}
+#modal-post-edit form {
+  padding: 0 20px;
+}
+
+.edit-close-label {
+  position: relative;
+  top: 50px;
+  left: 465px;
+  cursor: pointer;
+  color: #828282;
+}
+
+#edit-preview {
+  width: 510px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#edit-preview-close:hover {
+  opacity: 0.7;
+}
+
+
+/* --- Modal Window - Post Comment --- */
+/* --- Modal Window - Post Comment --- */
+
+#modal-comment {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 550px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 8px;
+}
+#mask-comment {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background: rgba(0,0,0,0.2);
+}
+#modal-comment form p {
+  margin: 0;
+}
+#modal-comment hr {
+  margin: 8px;
+}
+#modal-comment form {
+  padding: 0 20px;
+}
+#comment-preview {
+  width: 510px;
+  border-radius: 10px;
+}
+#comment-preview-holder {
+  height: auto;
+}
+#comment-preview-close {
+  position: relative;
+  top: 40px;
+  left: 470px;
+  cursor: pointer;
+  color: #828282;
+}
+#comment-preview-close:hover {
+  opacity: 0.7;
+}
+
+/* --- Comments - Showpost --- */
+/* --- Comments - Showpost --- */
+.yourcomment-container {
+  padding: 15px 20px 0 20px;
+}
+.yourcomment-alert {
+  margin: 0;
+}
+.comment-text {
+  margin: 10px 0 10px 0;
+}
+.comment-text-in-foreach {
+  margin: 10px 0 10px 0;
+  padding: 0 20px;
+}
+.comment-image {
+  margin-bottom: 10px;
+  width: 500px;
+}
+.comment-info {
+  margin: 0;
+  padding: 0 20px 0 20px;
+  color: #828282;
+  font-size: 12px;
+}
+.comment-userdata-container {
+  padding: 15px 20px 0 20px;
+}
+.comment-delete-btn-form {
+  padding: 5px 20px 10px 20px;
+}
+.comment-delete-btn {
+  width: 75%;
+}
+
+
+/* --- Profile Paga Top Part--- */
+/* --- Profile Paga Top Part--- */
+
+.profile-main {
+  background: #ffffff;
+}
+.profile-container {
+  width: 500px;
+  padding: 20px 20px 0 20px;
+  margin: 0;
+}
+.profile-image-container {
+  padding-bottom: 10px;
+}
+.profile-user-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.profile-username {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile-comments-container {
+  width: 500px;
+}
+.profile-default-image {
+  font-size: 170px;
+  color: #828282;
+}
+
+
+/* --- Post Tab --- */
+/* --- Post Tab --- */
+.post-updated-at {
+  margin-bottom: 0;
+  padding-right: 20px;
+  color: #828282;
+  font-size: 12px;
+}
+.post-tab-bottom {
+  padding: 5px 20px 10px 20px;
+  color: #828282;
+}
+
+/* --- Comments Tab --- */
+/* --- Comments Tab --- */
+.comment-tab-upper {
+  margin: 10px 0 10px 0;
+  padding: 0 20px;
+}
+.re-postname {
+  margin-bottom: 8px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.comment-message {
+  margin: 20px 0 10px 0;
+  padding: 15px 20px;
+  font-size: 15px;
+}
+.no-post {
+  color: #828282;
+}
+
+/* --- Setting Tab---*/
+/* --- Setting Tab---*/
+.setting-container {
+  width: 500px;
+  padding: 20px 20px;
+  background: #ffffff;
+  border-radius: 0 0 8px 8px;
+}
+#preview-default {
+  font-size: 25px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #F2F3F5;
+  color: #828282;
+  line-height:170px;
+}
+.profile-preview {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.set-btn {
+  width: 100%;
+  font-size: 17px;
+}
+.profilelabel {
+  margin: 10px 0 0 0;
+  width: 100%;
+  font-size: 17px;
+}
+.profilelabel input {
+  display: none;
+}
+.profile-close {
+  margin: 20px 0 0 15px;
+  color:#3490dc;
+}
+.profile-close:hover {
+  opacity: 0.7;
+}
+#introduction-form {
+  margin-top: 20px;
+}
+
+/* エラー表示 */
+.alert-container {
+  padding: 0 10px;
+}
+.alert-container li{
+  margin-bottom: 5px;
+  padding: 5px 20px;
+}
+.alert-top {
+  font-size: 18px;
+}
